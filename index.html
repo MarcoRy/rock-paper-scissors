@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .title {
+            margin: 20px;
+            font-family: arial,serif;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .choose {
+            margin: 30px 20%;
+            background-color: darkgray;
+            font-family: 'Times New Roman',sans-serif;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .images {
+            text-align: center;
+        }
+
+        .rock,
+        .scissors,
+        .paper {
+            margin-right: 30px;
+        }
+
+        .container {
+            margin: 20px 20% auto;
+        }
+
+        .leftColumn {
+            font-size: 20px;
+            background-color: rgb(75, 120, 243);
+            float: left;
+            font-weight: bold;
+
+        }
+
+        .rightColumn {
+            background-color: rgb(31, 177, 56);
+            float: right;
+        }
+
+        button {
+            margin: 20px 500px 10px;
+            font-size: 30px;
+            background-color: rgb(236, 149, 114);
+        }
+
+
+    </style>
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <div class='title'>Game rock, paper, scissors</div>
+    <div class='choose'>Choose your hand</div>
+
+    <div class='images'>
+        <img class="rock" src="rock.jpg" data-name="rock" alt="rock">
+        <img class="scissors" src="scissors.jpg" data-name="scissors" alt="scissors">
+        <img class="paper" src="paper.jpg" data-name="paper" alt="paper">
+    </div>
+
+    <button>Start game</button>
+
+    <div class="container">
+        <div class="leftColumn">
+            <p class='yourChoose'>Your choose:<span class='yourChooseResult'></span> </p>
+            <p class='AIchoose'>Opponent choose:<span class='AIchooseResult'></span> </p>
+            <p class='result'>Result:<span class='endResult'></span> </p>
+        </div>
+
+        <div class="rightColumn">
+            <h2>Statistics:</h2>
+            <p class="games">Games number:<span class="gamesNumber"></span></p>
+            <p class="wins">Wins:<span class="winsResult"></span></p>
+            <p class="draws">Draws:<span class="drawsResult"></span></p>
+            <p class="lost">Looses:<span class="lostResult"></span></p>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
