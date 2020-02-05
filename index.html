@@ -5,53 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="special-effect.css">
     <style>
-        .title {
-            margin: 20px;
-            font-family: arial,serif;
-            font-size: 40px;
+
+        body {
+            margin: 0;
+            background-color: #333641;
+            font-family: "ubuntu", Arial, sans-serif;
+            overflow-x: hidden;
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 1100px;
             text-align: center;
         }
 
+
         .choose {
-            margin: 30px 20%;
+            margin-top: 4px;
             background-color: darkgray;
-            font-family: 'Times New Roman',sans-serif;
+            font-family: 'Times New Roman', sans-serif;
             font-size: 25px;
             text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .images-btn-result-div {
+            margin-left: 270px;
+            float: left;
         }
 
         .images {
-            text-align: center;
+            margin-bottom: 27px;
         }
 
         .rock,
         .scissors,
         .paper {
             margin-right: 30px;
+            width: 150px;
         }
 
-        .container {
-            margin: 20px 20% auto;
-        }
-
-        .leftColumn {
-            font-size: 20px;
-            background-color: rgb(75, 120, 243);
-            float: left;
+        .result-column {
+            margin-top: 40px;
+            color: white;
             font-weight: bold;
-
+            font-size: 22px;
         }
 
-        .rightColumn {
+
+        .statistic-column {
             background-color: rgb(31, 177, 56);
             float: right;
         }
 
+        p {
+            margin: 2px;
+        }
+
+        .button-div {
+            clear: both;
+        }
+
         button {
-            margin: 20px 500px 10px;
             font-size: 30px;
             background-color: rgb(236, 149, 114);
+        }
+
+        .yourChoose, .AIchoose, .result {
+            float: left;
+            margin-right: 60px;
         }
 
 
@@ -60,32 +87,39 @@
 </head>
 
 <body>
-    <div class='title'>Game rock, paper, scissors</div>
+<div class="container">
+    <div class='title'>Rock, Paper, Scissors</div>
     <div class='choose'>Choose your hand</div>
-
-    <div class='images'>
-        <img class="rock" src="rock.jpg" data-name="rock" alt="rock">
-        <img class="scissors" src="scissors.jpg" data-name="scissors" alt="scissors">
-        <img class="paper" src="paper.jpg" data-name="paper" alt="paper">
-    </div>
-
-    <button>Start game</button>
-
-    <div class="container">
-        <div class="leftColumn">
-            <p class='yourChoose'>Your choose:<span class='yourChooseResult'></span> </p>
-            <p class='AIchoose'>Opponent choose:<span class='AIchooseResult'></span> </p>
-            <p class='result'>Result:<span class='endResult'></span> </p>
+    <div class="images-btn-result-div">
+        <div class='images'>
+            <img class="rock" src="rock.jpg" data-name="rock" alt="rock">
+            <img class="scissors" src="scissors.jpg" data-name="scissors" alt="scissors">
+            <img class="paper" src="paper.jpg" data-name="paper" alt="paper">
         </div>
-
-        <div class="rightColumn">
-            <h2>Statistics:</h2>
-            <p class="games">Games number:<span class="gamesNumber"></span></p>
-            <p class="wins">Wins:<span class="winsResult"></span></p>
-            <p class="draws">Draws:<span class="drawsResult"></span></p>
-            <p class="lost">Looses:<span class="lostResult"></span></p>
+        <div class="button-div">
+            <button>Start game</button>
+        </div>
+        <div class="result-column">
+            <p class='yourChoose'>Your choose:
+                <br>
+                <span class='yourChooseResult'></span></p>
+            <p class='AIchoose'>Opponent choose:
+                <br>
+                <span class='AIchooseResult'></span></p>
+            <p class='result'>Result:
+                <br>
+                <span class='endResult'></span></p>
         </div>
     </div>
+    <div class="statistic-column">
+        <h2>Statistics:</h2>
+        <p class="games">Games number:<span class="gamesNumber"></span></p>
+        <p class="wins">Wins:<span class="winsResult"></span></p>
+        <p class="draws">Draws:<span class="drawsResult"></span></p>
+        <p class="lost">Looses:<span class="lostResult"></span></p>
+    </div>
+
+</div>
 </body>
 <script src="main.js"></script>
 

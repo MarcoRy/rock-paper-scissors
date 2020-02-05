@@ -1,0 +1,25 @@
+
+.title {
+    margin: 15px;
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+    background: linear-gradient(to left, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+    background-size: 200% auto;
+    background-clip: unset;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-clip 2s reverse infinite;
+    display: inline-block;
+}
+
+
+@keyframes text-clip {
+    to {
+        background-position: 200% center;
+    }
+}
+
